@@ -6,4 +6,4 @@ before_install:
     - docker build -t outmanebaladi/docker-react -f Dockerfile.dev .
 
 scripts:
-    - docker run outmanebaladi/docker-react npm run test -- --coverage
+    - docker run -e CI=true outmanebaladi/docker-react npm run test 
